@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}SafeAlert - Recetas Inteligentes{% endblock %}</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    {% block extra_css %}{% endblock %}
+</head>
+<body class="bg-gray-50 min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="bg-gradient-to-r from-green-600 to-green-800 text-white shadow-md">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-3">
+                    <i class="fas fa-utensils text-2xl"></i>
+                    <div>
+                        <h1 class="text-2xl font-bold">SafeAlert</h1>
+                        <p class="text-sm text-green-100">Módulo de Recetas Inteligentes</p>
+                    </div>
+                </div>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="/" class="hover:text-green-200 transition-colors">
+                        <i class="fas fa-home mr-1"></i> Inicio
+                    </a>
+                    <a href="/generar-receta" class="hover:text-green-200 transition-colors">
+                        <i class="fas fa-magic mr-1"></i> Generar Receta
+                    </a>
+                    <a href="/api/recetas" class="hover:text-green-200 transition-colors">
+                        <i class="fas fa-code mr-1"></i> API
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="flex-grow">
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p class="text-sm">
+                        <i class="fas fa-utensils mr-1"></i> SafeAlert - Módulo de Recetas Inteligentes
+                    </p>
+                    <p class="text-xs text-gray-400 mt-1">Desarrollado con Python, FastAPI y OpenAI</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    {% block scripts %}{% endblock %}
+</body>
+</html>
