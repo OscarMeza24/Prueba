@@ -1,0 +1,6 @@
+🔧 Intentando conectar a Supabase usando curl...
+Debug: URL: https://fuvewmtivcczpqarsjkw.supabase.co
+Debug: Key length: 219
+🔧 Realizando consulta a niveles_prioridad...
+✅ Consulta exitosa a niveles_prioridad!
+Debug: Response: []
